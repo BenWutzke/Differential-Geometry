@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jul 26 21:05:48 2017
-
-@author: voodo
-"""
 
 import math
 import scipy.integrate as integrate
@@ -46,7 +41,12 @@ def tangential_angle(a,b):
    return lambda t: integrate.quad(ta,0,t)[0]
 
 def main():
-
+   """
+   We define a parametric curve here, where the values of a and b correspond to to the coefficients of the polynomials that describe 
+   x and y space.
+   x(t) = a0t^0 + a1t^1 + a2t^2 + ...
+   y(t) = b0t^0 + b1t^1 + b2t^2 + ...
+   """
    a = [1,1,-5]
    b = [1,-5,-1]
 
